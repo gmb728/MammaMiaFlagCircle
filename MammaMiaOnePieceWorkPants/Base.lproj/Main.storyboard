@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5U-HW-M8S">
-                                <rect key="frame" x="153" y="198" width="150" height="224"/>
+                                <rect key="frame" x="153" y="198" width="150" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -82,7 +82,19 @@
                                 </connections>
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WxY-pm-OrQ">
-                                <rect key="frame" x="186" y="344" width="88" height="78"/>
+                                <rect key="frame" x="206" y="367" width="45" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOr-wd-NhW">
+                                <rect key="frame" x="191" y="353" width="92" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luP-yD-NSw">
+                                <rect key="frame" x="213" y="373" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star1" translatesAutoresizingMaskIntoConstraints="NO" id="v25-iF-M3F">
+                                <rect key="frame" x="233" y="379" width="17" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -92,21 +104,24 @@
                     <connections>
                         <outlet property="blueLabel" destination="OFu-cJ-Djn" id="4bE-vg-rtf"/>
                         <outlet property="blueSlider" destination="7md-0x-HBf" id="h7j-4J-31G"/>
-                        <outlet property="crossImageView" destination="WxY-pm-OrQ" id="pWZ-Hy-NBx"/>
+                        <outlet property="circle1ImageView" destination="luP-yD-NSw" id="Tj8-He-BAv"/>
+                        <outlet property="circleImageView" destination="WxY-pm-OrQ" id="4Gg-UX-4XI"/>
                         <outlet property="donnaImageView" destination="tT6-3B-KvN" id="stN-Jy-fr3"/>
                         <outlet property="greenLabel" destination="aBG-FT-v5d" id="5vN-Go-VnX"/>
                         <outlet property="greenSlider" destination="Ezs-xQ-O8Y" id="ecn-oS-KMv"/>
                         <outlet property="patternImageView" destination="y5U-HW-M8S" id="7ch-ip-Nll"/>
+                        <outlet property="rectangleImageView" destination="yOr-wd-NhW" id="DwT-cB-Ezg"/>
                         <outlet property="redLabel" destination="8ug-ci-zcs" id="BRU-ST-BGx"/>
                         <outlet property="redSlider" destination="ajY-Cn-yy7" id="E9k-12-rcV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1330.4347826086957" y="-366.84782608695656"/>
+            <point key="canvasLocation" x="-2926.0869565217395" y="-483.42391304347831"/>
         </scene>
     </scenes>
     <resources>
         <image name="donna" width="1200" height="800"/>
+        <image name="star1" width="146" height="128"/>
     </resources>
 </document>

@@ -19,7 +19,12 @@ class changeColorViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     @IBOutlet weak var patternImageView: UIImageView!
     @IBOutlet weak var donnaImageView: UIImageView!
-    @IBOutlet weak var crossImageView: UIImageView!
+    @IBOutlet weak var rectangleImageView: UIImageView!
+    @IBOutlet weak var circleImageView: UIImageView!
+    
+    @IBOutlet weak var circle1ImageView: UIImageView!
+    
+    
     
     
     
@@ -29,7 +34,6 @@ class changeColorViewController: UIViewController {
         let patternImageView = UIImageView(frame: donnaImageView.frame)
         patternImageView.image = UIImage(named: "pattern")
         patternImageView.addSubview(donnaImageView)
-        
     
     }
     
@@ -55,48 +59,40 @@ class changeColorViewController: UIViewController {
     
     
     @IBAction func colorSliderChange(_ sender: UISlider) {
-
-            var pattern = CGRect(x: 153, y: 197, width: 150, height: 225)
-            patternImageView.backgroundColor = UIColor(red: 0, green: 0, blue: 255, alpha: 1)
-            pattern = CGRect(x: 0, y: 0, width: patternImageView.frame.width, height: patternImageView.frame.height/9)
-            let rectangleView1 = UIView(frame: pattern)
-            rectangleView1.backgroundColor = UIColor(red: 255, green: 255, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView1)
-            pattern = CGRect(x: 0, y: 225/9*1, width: patternImageView.frame.width, height: patternImageView.frame.height/9)
-            let rectangleView2 = UIView(frame: pattern)
-            rectangleView2.backgroundColor = UIColor(red: 0, green: 0, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView2)
-            pattern = CGRect(x: 0, y: 225/9*2, width: patternImageView.frame.width, height: patternImageView.frame.height/9)
-            let rectangleView3 = UIView(frame: pattern)
-            rectangleView3.backgroundColor = UIColor(red: 255, green: 255, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView3)
-            pattern = CGRect(x: 0, y: 225/9*3, width: patternImageView.frame.width, height: patternImageView.frame.height/9)
-            let rectangleView4 = UIView(frame: pattern)
-            rectangleView4.backgroundColor = UIColor(red: 0, green: 0, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView4)
-            pattern = CGRect(x: 0, y: 225/9*4, width: patternImageView.frame.width, height: patternImageView.frame.height/9)
-            let rectangleView5 = UIView(frame: pattern)
-            rectangleView5.backgroundColor = UIColor(red: 255, green: 255, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView5)
-            pattern = CGRect(x: 0, y: 225/9*5, width: patternImageView.frame.width, height:     patternImageView.frame.height/9)
-            let rectangleView6 = UIView(frame: pattern)
-            rectangleView6.backgroundColor = UIColor(red: 0, green: 0, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView6)
-            pattern = CGRect(x: 0, y: 225/9*6, width: patternImageView.frame.width, height:     patternImageView.frame.height/9)
-            let rectangleView7 = UIView(frame: pattern)
-            rectangleView7.backgroundColor = UIColor(red: 255, green: 255, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView7)
-            pattern = CGRect(x: 0, y: 225/9*7, width: patternImageView.frame.width, height:     patternImageView.frame.height/9)
-            let rectangleView8 = UIView(frame: pattern)
-            rectangleView8.backgroundColor = UIColor(red: 0, green: 0, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView8)
-            pattern = CGRect(x: 0, y: 225/9*8, width: patternImageView.frame.width, height:     patternImageView.frame.height/9)
-            let rectangleView9 = UIView(frame: pattern)
-            rectangleView9.backgroundColor = UIColor(red: 255, green: 255, blue:255, alpha: 1)
-            patternImageView.addSubview(rectangleView9)
-            pattern = CGRect(x: 0, y: 225, width: patternImageView.frame.width, height:     patternImageView.frame.height/9)
+        var pattern = CGRect(x: 153, y: 197, width: 150, height: 225)
+        patternImageView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        pattern = CGRect(x: 0, y: 0, width: patternImageView.frame.width, height: patternImageView.frame.height)
+        let rectangle = CGRect(x: 36, y: 156, width: 89, height: 68)
+        let rectangleImageView = UIView(frame:rectangle)
+        rectangleImageView.backgroundColor = UIColor(red:227/255, green: 10/255, blue: 23/255, alpha: 1)
         
-            donnaImageView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0.5)
+        let circle = CGRect(x:rectangleImageView.frame.width/4,y: rectangleImageView.frame.height/6,width: 44, height:44)
+        let circleImageView = UIView(frame:circle)
+        circleImageView.backgroundColor = UIColor(red:1, green:1, blue: 1, alpha: 1)
+        circleImageView.layer.cornerRadius = 22
+        circleImageView.clipsToBounds = true
+       
+        let circle1 = CGRect(x:circleImageView.frame.width/6,y: circleImageView.frame.height/8,width:34, height:34)
+        let circle1ImageView = UIView(frame:circle1)
+        circle1ImageView.backgroundColor = UIColor(red:227/255, green:10/255, blue: 23/255, alpha: 1)
+        circle1ImageView.layer.cornerRadius = 17
+        circle1ImageView.clipsToBounds = true
+        
+        let circle2 = CGRect(x:circle1ImageView.frame.width/4,y: circle1ImageView.frame.height/8,width:26, height:26)
+        let circle2ImageView = UIView(frame:circle2)
+        circle2ImageView.backgroundColor = UIColor(red:1, green:1, blue: 1, alpha: 1)
+        circle2ImageView.layer.cornerRadius = 13
+        circle2ImageView.clipsToBounds = true
+        
+        
+        
+        patternImageView.addSubview(rectangleImageView)
+        rectangleImageView.addSubview(circleImageView)
+        circleImageView.addSubview(circle1ImageView)
+        circle1ImageView.addSubview(circle2ImageView)
+        
+        
+            donnaImageView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 0)
         
             if sender == redSlider {
                 redLabel.text = String(format:"%.f", redSlider.value*255)
